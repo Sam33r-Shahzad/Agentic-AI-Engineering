@@ -77,12 +77,27 @@ tool_map = {
 def handle_tool_calls(tool_calls):
     results = []
     for tool_call in tool_calls:
-        tool_name = tool_call.function.name
-        arguments = json.loads(tool_call.function.arguments)
-        print(f"Tool called: {tool_name}", flush=True)
-        tool = tool_map.get(tool_name)
-        result = tool(**arguments) if tool else "Unknown tool: " + tool_name
-        results.append(
-            {"role": "tool", "content": json.dumps(result), "tool_call_id": tool_call.id}
-        )
+        try:
+            tool_name = tool_call.function.name
+            arguments = json.loads(tool_call.function.arguments)
+            print(f"Tool called: {tool_name} with {arguments}", flush=True)
+            
+            tool = tool_map.get(tool_name)
+            if tool:
+                result = tool(**arguments)
+            else:
+                result = f"Error: Tool {tool_name} not found."
+            
+            results.append({
+                "role": "tool",
+                "tool_call_id": tool_call.id,
+                "content": str(result)
+            })
+        except Exception as e:
+            print(f"Error executing tool {tool_call.function.name}: {e}")
+            results.append({
+                "role": "tool",
+                "tool_call_id": tool_call.id,
+                "content": f"Error: {str(e)}"
+            })
     return results
