@@ -188,11 +188,6 @@ memory.db
 6_mcp/frontend/*.tsbuildinfo
 
 
-
-
-
-
-
 3_crewai/
 4_langchain_langgraph/
 5_agent_frameworks/
