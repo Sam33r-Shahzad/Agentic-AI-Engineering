@@ -191,9 +191,7 @@ memory.db
 
 
 
-2_openai/code/
-2_openai/deep_research/
-2_openai/messenger.py
+
 
 3_crewai/
 4_langchain_langgraph/
