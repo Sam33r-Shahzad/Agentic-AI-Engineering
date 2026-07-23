@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv(override=True)
-MODEL_NAME = os.getenv("DEFAULT_MODEL_NAME", "gpt-5.4-mini")
+MODEL_NAME = os.getenv("DEFAULT_MODEL_NAME", "gpt-5.4-mini") # It will select the model from .env, in case if the name is not given it will select gpt-5.4-mini as default model.
 
 INSTRUCTIONS = """
 You are a senior researcher tasked with writing a cohesive report for a research query.
