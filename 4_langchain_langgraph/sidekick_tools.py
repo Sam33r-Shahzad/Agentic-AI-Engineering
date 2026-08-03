@@ -15,7 +15,6 @@ from langchain_mcp_adapters.tools import load_mcp_tools
 
 load_dotenv(override=True)
 
-# Wikimedia rejects the wikipedia library's default user agent, so identify ourselves properly
 wikipedia.set_user_agent("agentic-track-course (https://edwarddonner.com)")
 
 search = GoogleSerperRun(api_wrapper=GoogleSerperAPIWrapper())
@@ -88,7 +87,7 @@ class McpSessions:
         await asyncio.wait([ready, self._task], return_when=asyncio.FIRST_COMPLETED)
         ready.cancel()
         if self._task.done():
-            self._task.result()  # the servers failed to start; raise the real error
+            self._task.result()
         return self.tools
 
     def stop(self):

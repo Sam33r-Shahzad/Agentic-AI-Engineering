@@ -84,8 +84,6 @@ CSS = """
 #reset-button:hover { background: #BC101F !important; color: #FFFFFF !important; }
 """
 
-# The brand is light mode, so steer Gradio away from the system dark preference.
-# Served via launch(head=JS), so it runs before the app mounts and there is no dark flash.
 JS = """
 <script>
     const url = new URL(window.location);
