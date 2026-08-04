@@ -190,5 +190,8 @@ memory.db
 
 3_crewai/README.md
 3_crewai/reference/
-5_agent_frameworks/
+5_agent_frameworks/2_strands_pydantic
+5_agent_frameworks/3_maf_agno
+5_agent_frameworks/4_mastra
+5_agent_frameworks/5_agent_loop
 6_mcp/  
