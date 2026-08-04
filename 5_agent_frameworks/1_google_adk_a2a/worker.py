@@ -18,9 +18,9 @@ from quiet import silence
 
 silence()
 
-import board  # noqa: E402
-from google.adk.runners import InMemoryRunner  # noqa: E402
-from task_worker.agent import WORKSPACE, root_agent  # noqa: E402
+import board 
+from google.adk.runners import InMemoryRunner  
+from task_worker.agent import WORKSPACE, root_agent  
 
 TASK = "Read notes.txt, translate its contents into natural Spanish, and write the Spanish to spanish.txt."
 
@@ -53,7 +53,7 @@ def main() -> None:
         print("Board is ready. Run `uv run adk web` and ask the worker to work the board.")
         return
 
-    board.claim_todo(goal_id)  # the worker picks up the goal: pending -> in_progress
+    board.claim_todo(goal_id) 
     asyncio.run(run())
 
     print("\nBoard after the run:")

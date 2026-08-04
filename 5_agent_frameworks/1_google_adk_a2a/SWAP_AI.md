@@ -14,10 +14,10 @@ Then wrap the model. In `task_worker/agent.py`, swap the model string for a `Lit
 from google.adk.models.lite_llm import LiteLlm
 
 root_agent = LlmAgent(
-    model=LiteLlm(model="openai/gpt-5.4-mini"),   # any LiteLLM model string
+    model=LiteLlm(model="openai/gpt-5.4-mini"), 
     name="task_worker",
     description="Works one task from the SQLite board using its files.",
-    instruction=...,        # unchanged
+    instruction=...,       
     tools=[show_todos, plan_steps, complete_task, filesystem],
 )
 ```
