@@ -1,10 +1,3 @@
-/**
- * The tools we give the agent: three small board tools and the filesystem MCP
- * server. These are the same three operations every framework gets this week,
- * here written the Mastra way with createTool and zod schemas. The step files
- * and the worker all import them from here, so the agent is given the same tools
- * everywhere.
- */
 
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
@@ -43,15 +36,7 @@ export const completeTask = createTool({
 /** Attach to an agent with tools: { ...boardTools }. */
 export const boardTools = { showTodos, planSteps, completeTask };
 
-/**
- * The filesystem reference server, the same Node server every framework uses
- * this week, scoped to a single folder. Mastra exposes both fixes the day needs
- * as plain options on the stdio server: stderr "ignore" discards the server's
- * startup banner and lets it run from a Jupyter kernel on Windows, and cwd starts
- * the server in the workspace so the agent's relative file names resolve there.
- * No subclass and no monkeypatch, which makes this the cleanest MCP wiring of the
- * week. Open it with await mcp.listTools() and close it with await mcp.disconnect().
- */
+
 export function makeFilesystem(dir = WORKSPACE): MCPClient {
   return new MCPClient({
     servers: {

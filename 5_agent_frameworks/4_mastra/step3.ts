@@ -1,17 +1,3 @@
-/**
- * Step 3: Add tools.
- *
- * First our project for the week: a tiny SQLite todo board, the TypeScript twin of
- * the board.py from Days 1 to 3, using Node's built-in node:sqlite. It lives in
- * board.ts; open it to read it. A worker is handed one goal; to reach it, it writes
- * its own step todos under that goal, ticks each one off, and closes the goal.
- *
- * A tool in Mastra is createTool with an id, a description, a zod input schema, and
- * an async execute. The three board tools (show_todos, plan_steps, complete_task)
- * live in tools.ts. Here we give an agent the board tools and ask what is on the
- * board: watch it decide, on its own, to call show_todos before it answers. Run it
- * with: npm run step3
- */
 
 import "./env.ts";
 import { Agent } from "@mastra/core/agent";
@@ -35,4 +21,4 @@ console.log(reply.text);
 console.log("\nThe board:");
 showBoard();
 
-process.exit(0); // Mastra keeps its model connection pool open, so exit once the work is done
+process.exit(0); 
