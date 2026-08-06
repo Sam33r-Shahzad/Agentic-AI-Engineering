@@ -12,5 +12,7 @@ import os
 # WORKER_MODEL = os.environ.get("WORKER_MODEL", "gpt-5.5")  # cheaper: gpt-5.4-mini
 
 
-ORCHESTRATOR_MODEL = os.environ.get("ORCHESTRATOR_MODEL", "openrouter/google/gemini-flash-1.5") 
-WORKER_MODEL = os.environ.get("WORKER_MODEL", "openrouter/openai/gpt-4o-mini")
+
+
+ORCHESTRATOR_MODEL = os.environ.get("ORCHESTRATOR_MODEL", "groq/llama-3.3-70b-versatile")
+WORKER_MODEL = os.environ.get("WORKER_MODEL", "groq/llama-3.1-8b-instant")

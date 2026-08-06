@@ -1,12 +1,9 @@
-# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 
-# C extensions
 *.so
 
-# Distribution / packaging
 .Python
 build/
 develop-eggs/
@@ -26,17 +23,12 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
 
-# Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Unit test / coverage reports
 htmlcov/
 .tox/
 .nox/
@@ -51,24 +43,19 @@ coverage.xml
 .pytest_cache/
 cover/
 
-# Translations
 *.mo
 *.pot
 
-# Django stuff:
 *.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
 
-# Flask stuff:
 instance/
 .webassets-cache
 
-# Scrapy stuff:
 .scrapy
 
-# Sphinx documentation
 docs/_build/
 
 # PyBuilder
@@ -129,14 +116,6 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-# PyCharm
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
-
-# Ruff stuff:
 .ruff_cache/
 
 # PyPI configuration file
@@ -154,17 +133,17 @@ cython_debug/
 3_crewai/reference/engineering_team/sandbox/
 3_crewai/coursework/engineering_team/sandbox/
 
-# Ignore memory in sidekick
+
 memory.db-shm
 memory.db-wal
 memory.db
 
-# Ignore Accounts database in capstone project
+
 6_mcp/accounts.db
-# Ignore all runtime memory and vector data in week 6, keep the directory
+
 6_mcp/memory/*
 !6_mcp/memory/memory.txt
-# Week 4 LangChain/LangGraph transient artifacts
+
 .playwright-mcp/
 4_langchain_langgraph/sandbox/*
 !4_langchain_langgraph/sandbox/skills/
@@ -186,8 +165,7 @@ memory.db
 6_mcp/playwright_check.png
 6_mcp/frontend/node_modules/
 6_mcp/frontend/*.tsbuildinfo
-
+3_crewai/reference/
 
 3_crewai/README.md
-3_crewai/reference/
 6_mcp/  
