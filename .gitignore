@@ -168,4 +168,11 @@ memory.db
 3_crewai/reference/
 
 3_crewai/README.md
-6_mcp/  
+6_mcp/backend
+6_mcp/frontend
+6_mcp/memory
+6_mcp/demo
+6_mcp/2_lab2.ipynb
+6_mcp/3_lab3.ipynb
+6_mcp/4_lab4.ipynb
+6_mcp/5_lab5.ipynb
